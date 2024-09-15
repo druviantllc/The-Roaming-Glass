@@ -66,6 +66,19 @@
             justify-content: center;
             text-align: center;
             flex-direction: column;
+            position: relative;
+        }
+
+        /* Add an overlay to improve text readability */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: 1;
         }
 
         header h1 {
@@ -73,12 +86,16 @@
             margin: 0;
             padding: 0;
             color: #FFB703;
+            position: relative;
+            z-index: 2;
         }
 
         header p {
-            font-size: 1.5rem;
+            font-size: 1.8rem; /* Increase the size for better visibility */
             margin-top: 10px;
             color: #FFFFFF;
+            position: relative;
+            z-index: 2;
         }
 
         .cta-button {
@@ -91,6 +108,8 @@
             font-size: 1.2rem;
             margin-top: 20px;
             transition: background-color 0.3s ease;
+            position: relative;
+            z-index: 2;
         }
 
         .cta-button:hover {
@@ -179,7 +198,7 @@
             }
 
             header p {
-                font-size: 1.2rem;
+                font-size: 1.4rem; /* Slightly larger for mobile */
             }
 
             .content-section {
