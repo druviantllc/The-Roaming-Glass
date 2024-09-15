@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Roaming Glass - Mobile Bartending Services</title>
-    <meta name="description" content="The Roaming Glass provides professional mobile bartending services, specializing in craft cocktails and exceptional service for any event.">
-
+    <meta name="description" content="The Roaming Glass provides fun, professional mobile bartending services for weddings, parties, and events.">
+    
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+    
     <!-- CSS Styling -->
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -22,114 +22,167 @@
 
         /* Navigation Bar */
         nav {
-            background-color: #023047; /* Dark Navy */
-            padding: 10px 0;
+            background-color: #023047;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             width: 100%;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            text-align: center;
         }
 
         nav ul li {
             display: inline;
-            margin: 0 20px;
+            margin: 0 15px;
         }
 
         nav ul li a {
-            color: #FFFFFF; /* White text for contrast */
+            color: #FFFFFF;
             text-decoration: none;
             font-weight: bold;
+            font-size: 18px;
         }
 
         nav ul li a:hover {
-            color: #8ECAE6; /* Light blue hover */
+            color: #FFB703;
         }
 
-        /* Box-style for content sections */
-        .content-box {
-            background-color: white;
-            padding: 40px;
-            margin: 30px auto;
-            max-width: 1200px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Header Section */
+        header {
+            background-image: url('your-hero-image.jpg'); /* You can add a high-quality image of your bar setup here */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
         }
 
-        .content-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            padding: 0;
+            color: #FFB703;
         }
 
-        h1, h2 {
-            color: #219EBC; /* Medium blue for headings */
-            margin-bottom: 20px;
-            font-family: 'Poppins', sans-serif;
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #FFFFFF;
         }
 
-        h3 {
-            color: #FB8500; /* Orange for subheadings */
-        }
-
-        /* Softer Buttons */
-        a.button {
+        .cta-button {
             display: inline-block;
             padding: 12px 25px;
-            background-color: #FFB703; /* Bright yellow for buttons */
+            background-color: #FB8500;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            margin-top: 20px;
             transition: background-color 0.3s ease;
         }
 
-        a.button:hover {
-            background-color: #FB8500; /* Orange on hover */
+        .cta-button:hover {
+            background-color: #FFB703;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            color: #219EBC;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .service-box {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px 0;
+        }
+
+        .service-box h3 {
+            color: #FB8500;
+            font-size: 1.8rem;
+        }
+
+        .service-box p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .service-box a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFB703;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .service-box a:hover {
+            background-color: #FB8500;
         }
 
         /* Footer */
         footer {
             background-color: #023047;
             color: white;
+            padding: 40px 0;
             text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            font-family: 'Poppins', sans-serif;
+        }
+
+        footer p {
+            font-size: 1rem;
+            color: #FFFFFF;
         }
 
         footer a {
-            color: white;
+            color: #FFB703;
             text-decoration: none;
         }
 
         footer a:hover {
-            color: #8ECAE6;
-        }
-
-        footer p {
-            color: #F4F4F9;
+            color: #FB8500;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            body {
-                margin: 10px;
+            header h1 {
+                font-size: 2.5rem;
             }
 
-            nav ul li {
-                display: block;
-                margin: 10px 0;
+            header p {
+                font-size: 1.2rem;
             }
 
-            .content-box {
+            .content-section {
                 padding: 20px;
             }
         }
@@ -139,68 +192,59 @@
 
     <!-- Navigation Bar -->
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Content Box Section -->
-    <div class="content-box">
-        <header>
-            <h1>The Roaming Glass</h1>
-            <p>Welcome to The Roaming Glass, where we bring exceptional craft cocktails and professional bartending services directly to your event. Whether it’s a wedding, corporate function, or private party, we’re here to elevate your experience.</p>
-        </header>
-    </div>
+    <!-- Header Section -->
+    <header>
+        <h1>The Roaming Glass</h1>
+        <p>Craft Cocktails, Delivered Anywhere</p>
+        <a href="#contact" class="cta-button">Book Now</a>
+    </header>
 
-    <div class="content-box">
-        <!-- Services Section -->
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="service">
-                <h3>Signature Cocktails</h3>
-                <p>Our mixologists craft unique, delicious cocktails that complement your event’s theme and delight your guests.</p>
-                <p><a href="services.html" class="button">Learn More About Our Services</a></p>
-            </div>
-            <div class="service">
-                <h3>Event Packages</h3>
-                <p>We offer customizable bartending packages for all types of events, from intimate gatherings to large-scale celebrations.</p>
-                <p><a href="services.html" class="button">Explore Event Packages</a></p>
-            </div>
-            <div class="service">
-                <h3>Mobile Bar Rentals</h3>
-                <p>Need a bar setup for your event? We provide mobile bar rentals with everything you need for a professional experience.</p>
-                <p><a href="services.html" class="button">Check Out Mobile Bar Options</a></p>
-            </div>
-        </section>
-    </div>
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+        <h2>What We Offer</h2>
+        <div class="service-box">
+            <h3>Signature Cocktails</h3>
+            <p>Our mixologists create custom cocktails to match your event’s vibe and make it unforgettable.</p>
+            <a href="#contact">Get a Custom Menu</a>
+        </div>
+        <div class="service-box">
+            <h3>Event Packages</h3>
+            <p>Whether it's a wedding, corporate event, or private party, we’ve got packages that make planning easy.</p>
+            <a href="#contact">See Packages</a>
+        </div>
+        <div class="service-box">
+            <h3>Mobile Bar Rentals</h3>
+            <p>We bring the full bar experience to you, complete with bartenders, drinks, and all the equipment.</p>
+            <a href="#contact">Learn More</a>
+        </div>
+    </section>
 
-    <div class="content-box">
-        <!-- Portfolio Section -->
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <p>Take a look at our recent events and see how we’ve helped clients bring their visions to life with top-notch bartending services.</p>
-            <p><a href="portfolio.html" class="button">View Portfolio</a></p>
-        </section>
-    </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section">
+        <h2>See Us in Action</h2>
+        <p>Check out some of our favorite moments from past events.</p>
+        <!-- You can add images or links to your gallery here -->
+        <a href="#contact" class="cta-button">View Portfolio</a>
+    </section>
 
-    <div class="content-box">
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Interested in booking The Roaming Glass for your next event? Reach out to discuss your needs and get a quote!</p>
-            <p>Email: <a href="mailto:druviantllc@gmail.com">druviantllc@gmail.com</a></p>
-        </section>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <h2>Let's Work Together</h2>
+        <p>Reach out to book The Roaming Glass for your next event!</p>
+        <a href="mailto:druviantllc@gmail.com" class="cta-button">Contact Us</a>
+    </section>
 
     <!-- Footer -->
     <footer>
         <p>© 2024 The Roaming Glass | Managed by Travis Dunn</p>
-        <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
-        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        <p><a href="mailto:druviantllc@gmail.com">druviantllc@gmail.com</a></p>
     </footer>
 
 </body>
