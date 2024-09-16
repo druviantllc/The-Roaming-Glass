@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - The Roaming Glass</title>
-    <meta name="description" content="Contact The Roaming Glass for mobile bartending services, event packages, and custom cocktails.">
+    <title>Contact - The Roaming Glass</title>
+    <meta name="description" content="Get in touch with The Roaming Glass for any questions or inquiries about our mobile bartending services.">
     
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -65,64 +65,63 @@
         .contact-section h2 {
             color: #219EBC;
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
-        .contact-section p {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-
-        form {
+        .contact-form {
             background-color: #FFFFFF;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 30px;
+            text-align: left;
         }
 
-        form input, form textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
+        .contact-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%; /* Ensures full width input fields */
+            padding: 10px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 1rem;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
 
-        form input[type="submit"] {
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            padding: 12px 25px;
             background-color: #FFB703;
             color: white;
+            text-decoration: none;
+            border-radius: 5px;
             border: none;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
-        form input[type="submit"]:hover {
+        .contact-form button:hover {
             background-color: #FB8500;
         }
 
-        /* Footer */
-        footer {
-            background-color: #023047;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            margin-top: 50px;
-        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 20px;
+            }
 
-        footer p {
-            font-size: 1rem;
-            color: #FFFFFF;
-        }
-
-        footer a {
-            color: #FFB703;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #FB8500;
+            .contact-form {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -140,16 +139,21 @@
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <h2>Contact The Roaming Glass</h2>
-        <p>We would love to help you create the perfect event! Whether you're looking for custom cocktails, mobile bar rentals, or any of our add-ons, feel free to reach out using the form below or email us directly.</p>
-        
-        <!-- Contact Form -->
-        <form action="submit_form.php" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send Message">
-        </form>
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
