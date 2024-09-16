@@ -55,3 +55,7 @@
 .hero a:hover {
     background-color: #FB8500;
 }
+
+body {
+    background-color: red;
+}
