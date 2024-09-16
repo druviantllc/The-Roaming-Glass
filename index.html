@@ -130,7 +130,7 @@
             margin-bottom: 20px;
         }
 
-        /* Service Boxes Uniformed */
+        /* Service Boxes */
         .services-preview .service-box {
             background-color: #FFFFFF;
             border-radius: 12px;
@@ -140,7 +140,7 @@
             display: inline-block;
             width: 30%; /* Uniform width */
             vertical-align: top;
-            height: 350px; /* Uniform height */
+            height: auto; /* Let the height adjust based on content */
         }
 
         .services-preview .service-box h3 {
@@ -152,7 +152,10 @@
         .services-preview .service-box p {
             font-size: 1rem;
             color: #666;
-            height: 100px; /* Uniform height for text content */
+        }
+
+        .services-preview .service-box .button-group {
+            margin-top: 20px;
         }
 
         .services-preview .service-box a {
@@ -162,10 +165,9 @@
             color: white;
             border-radius: 25px;
             text-decoration: none;
-            margin-top: 20px;
+            margin-top: 15px;
             font-weight: bold;
-            position: absolute;
-            bottom: 30px; /* Ensures button stays at the bottom of the box */
+            margin-right: 10px; /* Adds space between multiple buttons */
         }
 
         .services-preview .service-box a:hover {
@@ -207,13 +209,6 @@
             .services-preview .service-box {
                 width: 100%; /* Full width on small screens */
                 margin: 20px 0;
-                height: auto;
-            }
-
-            .services-preview .service-box a {
-                position: relative;
-                bottom: auto;
-                margin-top: 15px;
             }
         }
     </style>
@@ -243,17 +238,23 @@
         <div class="service-box">
             <h3>Signature Cocktails</h3>
             <p>Custom, crafted cocktails that will delight your guests and elevate your event.</p>
-            <a href="services.html">Learn More</a>
+            <div class="button-group">
+                <a href="services.html">Learn More</a>
+            </div>
         </div>
         <div class="service-box">
             <h3>Event Packages</h3>
             <p>We provide bartending services for weddings, corporate functions, and private parties.</p>
-            <a href="services.html">Explore Packages</a>
+            <div class="button-group">
+                <a href="services.html">Explore Packages</a>
+            </div>
         </div>
         <div class="service-box">
             <h3>Mobile Bar Rentals</h3>
             <p>Complete mobile bar rentals, including bartenders, equipment, and more.</p>
-            <a href="services.html">Rent a Bar</a>
+            <div class="button-group">
+                <a href="services.html">Rent a Bar</a>
+            </div>
         </div>
     </section>
 
