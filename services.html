@@ -71,7 +71,7 @@
         /* Service Boxes */
         .services-grid {
             display: flex;
-            gap: 30px;
+            gap: 10px; /* Reduced gap between boxes */
             justify-content: space-between;
             flex-wrap: wrap;
         }
@@ -84,7 +84,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 30%; /* Ensures the boxes are uniform in width */
+            width: calc(33% - 10px); /* Adjusted width to make boxes closer */
             text-align: left;
         }
 
@@ -98,7 +98,7 @@
             font-size: 1rem;
             color: #666;
             margin-bottom: 20px;
-            flex-grow: 1; /* Allows the content area to grow and push the button to the bottom */
+            flex-grow: 1;
         }
 
         .service-box a {
@@ -261,4 +261,4 @@
     <!-- Footer -->
     <footer>
         <p>© 2024 The Roaming Glass | Managed by Katie Dunn</p>
-        <p><a href="mailto:druviantllc@gmail.com">Contact
+        <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc
