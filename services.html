@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     
     <!-- Link to External CSS File -->
-    <link rel="stylesheet" href="styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -21,86 +21,129 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
         </ul>
     </nav>
+
+    <!-- Inputs for Hours and Guests -->
+    <section class="calculator-section">
+        <h2>Event Details</h2>
+
+        <!-- Number of Hours -->
+        <label for="hours">Number of Hours:</label>
+        <input type="number" id="hours" placeholder="Enter number of hours (4-hour minimum)" min="4">
+
+        <!-- Number of Guests -->
+        <label for="guest-count">Number of Guests:</label>
+        <input type="number" id="guest-count" placeholder="Enter number of guests" min="1">
+    </section>
 
     <!-- Services Menu Section -->
     <section class="menu-section">
         <h2>Our Services Menu</h2>
 
-        <!-- Signature Cocktails -->
+        <!-- Signature Cocktails - Included -->
         <div class="menu-item">
-            <h3>Signature Cocktails</h3>
-            <p>Our expert mixologists will work with you to create custom cocktails that perfectly complement your event.</p>
-            <a href="contact.html">Get a Custom Menu</a>
+            <div class="menu-details">
+                <h3>Signature Cocktails</h3>
+                <p>Custom cocktails tailored to your event, using seasonal ingredients and creative recipes.</p>
+            </div>
+            <div class="menu-price">
+                <span class="included">Included</span>
+            </div>
         </div>
 
-        <!-- Event Packages -->
+        <!-- Event Packages - Included -->
         <div class="menu-item">
-            <h3>Event Packages</h3>
-            <p>Fully customizable event packages tailored to your needs, whether it's a wedding, corporate event, or private party.</p>
-            <a href="contact.html">Explore Packages</a>
-        </div>
-
-        <!-- Mobile Bar Rentals -->
-        <div class="menu-item">
-            <h3>Mobile Bar Rentals</h3>
-            <p>Choose from a variety of mobile bar styles to fit your event’s theme and create an unforgettable experience.</p>
-            <a href="contact.html">Rent a Mobile Bar</a>
+            <div class="menu-details">
+                <h3>Event Packages</h3>
+                <p>Comprehensive event packages with bartenders, glassware, and equipment for a seamless bar experience.</p>
+            </div>
+            <div class="menu-price">
+                <span class="included">Included</span>
+            </div>
         </div>
     </section>
 
-    <!-- Add-Ons Menu Section -->
-    <section class="menu-section">
-        <h2>Event Enhancements</h2>
-
-        <!-- Customized Cocktail Menu Cards -->
+    <!-- Customization Options and Add-Ons -->
+    <section class="addons-section">
+        <h2>Customization Options & Add-Ons</h2>
         <div class="menu-item">
-            <h3>Customized Cocktail Menu Cards</h3>
-            <p>Personalized menu cards featuring your signature drinks to add a special touch to your event.</p>
-            <a href="contact.html">Add to Package</a>
+            <div class="menu-details">
+                <h3>Customized Glassware</h3>
+                <p>Personalized glassware to add an elegant touch to your event.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="custom-glassware" onclick="addService('Customized Glassware', 100)"> $100</label>
+            </div>
         </div>
 
-        <!-- Signature Drink Consultation -->
         <div class="menu-item">
-            <h3>Signature Drink Consultation</h3>
-            <p>Work with our expert mixologists to craft a unique signature cocktail that represents your event.</p>
-            <a href="contact.html">Add to Package</a>
+            <div class="menu-details">
+                <h3>Customized Drink Menu Design</h3>
+                <p>Design custom drink menus that match your event's theme.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="custom-drink-menu" onclick="addService('Customized Drink Menu Design', 150)"> $150</label>
+            </div>
         </div>
 
-        <!-- Mocktail Station -->
         <div class="menu-item">
-            <h3>Mocktail Station</h3>
-            <p>Offer non-alcoholic options with a mocktail station designed to impress all your guests.</p>
-            <a href="contact.html">Add to Package</a>
+            <div class="menu-details">
+                <h3>Themed Garnishes</h3>
+                <p>Themed garnishes for an extra touch of creativity.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="themed-garnishes" onclick="addService('Themed Garnishes', 75)"> $75</label>
+            </div>
         </div>
 
-        <!-- Themed Glassware and Decor -->
         <div class="menu-item">
-            <h3>Themed Glassware and Decor</h3>
-            <p>Enhance the ambiance of your event with themed glassware, decor, and garnishes.</p>
-            <a href="contact.html">Add to Package</a>
+            <div class="menu-details">
+                <h3>Mocktail Station</h3>
+                <p>A mocktail station serving non-alcoholic drinks for all guests.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="mocktail-station" onclick="addService('Mocktail Station', 150)"> $150</label>
+            </div>
         </div>
 
-        <!-- Champagne Service -->
         <div class="menu-item">
-            <h3>Champagne Service</h3>
-            <p>Treat your guests to a dedicated champagne station with beautiful presentation.</p>
-            <a href="contact.html">Add to Package</a>
+            <div class="menu-details">
+                <h3>Selfie Wall & Camera</h3>
+                <p>Fun selfie wall and camera setup for guests to capture memories.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="selfie-wall" onclick="addService('Selfie Wall & Camera', 250)"> $250</label>
+            </div>
         </div>
 
-        <!-- Selfie Wall -->
         <div class="menu-item">
-            <h3>Selfie Wall</h3>
-            <p>A fun and stylish backdrop for your guests to take memorable selfies.</p>
-            <a href="contact.html">Add to Package</a>
+            <div class="menu-details">
+                <h3>Champagne Service</h3>
+                <p>A dedicated champagne station for a sparkling touch to your event.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="champagne-service" onclick="addService('Champagne Service', 175)"> $175</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <h2>Total Price Calculator</h2>
+
+        <div>
+            <input type="checkbox" id="no-tip-jar">
+            <label for="no-tip-jar">I do not want a tip jar (18% gratuity will be added).</label>
         </div>
 
-        <!-- Selfie Camera -->
-        <div class="menu-item">
-            <h3>Selfie Camera</h3>
-            <p>Capture the best moments of your event with a dedicated selfie camera setup.</p>
-            <a href="contact.html">Add to Package</a>
+        <button class="cta-button" onclick="calculatePrice()">Calculate Total Price</button>
+
+        <div id="result" class="result-section">
+            <h3>Total Price: $<span id="total-price">0</span></h3>
+            <p>Number of Bartenders: <span id="bartender-count">0</span></p>
+            <p id="gratuity-message" style="display:none;">An 18% gratuity has been added.</p>
         </div>
     </section>
 
@@ -111,6 +154,9 @@
             <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
         </div>
     </footer>
+
+    <!-- Link to External JavaScript File -->
+    <script src="js/calculator.js"></script>
 
 </body>
 </html>
