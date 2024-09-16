@@ -81,4 +81,175 @@
             z-index: 1;
         }
 
-      
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            padding: 0;
+            color: #FFB703;
+            position: relative;
+            z-index: 2;
+        }
+
+        header p {
+            font-size: 1.8rem;
+            margin-top: 10px;
+            color: #FFFFFF;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #FB8500;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button:hover {
+            background-color: #FFB703;
+        }
+
+        /* Services Preview Section */
+        .services-preview {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services-preview h2 {
+            color: #219EBC;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .services-preview .service-box {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px 0;
+            display: inline-block;
+            width: 30%;
+            margin-right: 3%;
+            vertical-align: top;
+        }
+
+        .services-preview .service-box h3 {
+            color: #FB8500;
+            font-size: 1.8rem;
+        }
+
+        .services-preview .service-box p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .services-preview .service-box a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFB703;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .services-preview .service-box a:hover {
+            background-color: #FB8500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #023047;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
+            color: #FFFFFF;
+        }
+
+        footer a {
+            color: #FFB703;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #FB8500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.4rem;
+            }
+
+            .services-preview .service-box {
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>The Roaming Glass</h1>
+        <p>Craft Cocktails, Delivered Anywhere</p>
+        <a href="contact.html" class="cta-button">Book Now</a>
+    </header>
+
+    <!-- Services Preview Section -->
+    <section class="services-preview">
+        <h2>Our Services</h2>
+        <div class="service-box">
+            <h3>Signature Cocktails</h3>
+            <p>Custom, crafted cocktails that will delight your guests and elevate your event.</p>
+            <a href="services.html">Learn More</a>
+        </div>
+        <div class="service-box">
+            <h3>Event Packages</h3>
+            <p>We provide bartending services for weddings, corporate functions, and private parties.</p>
+            <a href="services.html">Explore Packages</a>
+        </div>
+        <div class="service-box">
+            <h3>Mobile Bar Rentals</h3>
+            <p>Complete mobile bar rentals, including bartenders, equipment, and more.</p>
+            <a href="services.html">Rent a Bar</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 The Roaming Glass | Managed by Katie Dunn</p>
+        <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
