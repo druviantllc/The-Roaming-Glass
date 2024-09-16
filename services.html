@@ -70,9 +70,10 @@
 
         /* Service Boxes */
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
             gap: 30px;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .service-box {
@@ -80,6 +81,10 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30%; /* Ensures the boxes are uniform in width */
             text-align: left;
         }
 
@@ -93,6 +98,7 @@
             font-size: 1rem;
             color: #666;
             margin-bottom: 20px;
+            flex-grow: 1; /* Allows the content area to grow and push the button to the bottom */
         }
 
         .service-box a {
@@ -103,6 +109,7 @@
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
+            align-self: flex-start;
         }
 
         .service-box a:hover {
@@ -182,6 +189,14 @@
             header p {
                 font-size: 1.4rem;
             }
+
+            .services-grid {
+                flex-direction: column;
+            }
+
+            .service-box {
+                width: 100%; /* Full width on mobile screens */
+            }
         }
     </style>
 </head>
@@ -225,7 +240,6 @@
     </section>
 
     <!-- Add-Ons Section -->
-<!-- Add-Ons Section -->
     <section class="add-ons-section">
         <h2>Add-Ons</h2>
         <div class="add-ons-box">
@@ -244,12 +258,7 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer>
         <p>© 2024 The Roaming Glass | Managed by Katie Dunn</p>
-        <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
-    </footer>
-
-</body>
-</html>
+        <p><a href="mailto:druviantllc@gmail.com">Contact
