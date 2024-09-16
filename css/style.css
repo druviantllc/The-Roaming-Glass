@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* Global Styles */
 html, body {
     height: 100%;
     margin: 0;
@@ -46,18 +45,17 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('../images/hero-image.jpg'); /* Path to the image */
+    background-image: url('../images/hero-image.jpg'); /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     color: white;
-    position: relative;
     padding: 100px 20px;
     text-align: center;
 }
 
 .hero::before {
     content: "";
-    background-color: rgba(0, 0, 0, 0.1); /* Lighter opacity */
+    background-color: rgba(0, 0, 0, 0.1); /* Lighter overlay */
     position: absolute;
     top: 0;
     left: 0;
@@ -69,19 +67,18 @@ nav ul li a:hover {
 .hero-content {
     position: relative;
     z-index: 2;
-    animation: fadeIn 1.5s ease;
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
-    animation: fadeIn 1s ease;
+    color: white;
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    animation: fadeIn 1.2s ease;
+    color: white;
 }
 
 .hero a {
@@ -92,20 +89,10 @@ nav ul li a:hover {
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    animation: fadeIn 1.4s ease;
 }
 
 .hero a:hover {
     background-color: #FB8500;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 /* Services Section */
@@ -174,6 +161,89 @@ nav ul li a:hover {
     background-color: #FB8500;
 }
 
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.contact-section h2 {
+    color: #219EBC;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+    background-color: #FFB703;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #FB8500;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    color: #219EBC;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.portfolio-section p {
+    font-size: 2.5rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+.portfolio-section .party-emoji {
+    font-size: 3rem;
+}
+
 /* Footer */
 footer {
     background-color: #023047;
@@ -210,5 +280,13 @@ footer a:hover {
     .service-box {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .contact-section, .portfolio-section {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
     }
 }
