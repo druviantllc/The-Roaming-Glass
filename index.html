@@ -130,26 +130,29 @@
             margin-bottom: 20px;
         }
 
+        /* Service Boxes Uniformed */
         .services-preview .service-box {
             background-color: #FFFFFF;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            margin: 20px 0;
+            margin: 20px;
             display: inline-block;
-            width: 30%;
-            margin-right: 3%;
+            width: 30%; /* Uniform width */
             vertical-align: top;
+            height: 350px; /* Uniform height */
         }
 
         .services-preview .service-box h3 {
             color: #FB8500;
             font-size: 1.8rem;
+            margin-bottom: 10px;
         }
 
         .services-preview .service-box p {
             font-size: 1rem;
             color: #666;
+            height: 100px; /* Uniform height for text content */
         }
 
         .services-preview .service-box a {
@@ -159,8 +162,10 @@
             color: white;
             border-radius: 25px;
             text-decoration: none;
-            margin-top: 15px;
+            margin-top: 20px;
             font-weight: bold;
+            position: absolute;
+            bottom: 30px; /* Ensures button stays at the bottom of the box */
         }
 
         .services-preview .service-box a:hover {
@@ -200,8 +205,15 @@
             }
 
             .services-preview .service-box {
-                width: 100%;
+                width: 100%; /* Full width on small screens */
                 margin: 20px 0;
+                height: auto;
+            }
+
+            .services-preview .service-box a {
+                position: relative;
+                bottom: auto;
+                margin-top: 15px;
             }
         }
     </style>
