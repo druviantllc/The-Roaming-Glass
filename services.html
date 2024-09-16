@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - The Roaming Glass</title>
-    <meta name="description" content="Explore the services offered by The Roaming Glass, including custom cocktails, event packages, and mobile bar rentals.">
+    <title>Contact - The Roaming Glass</title>
+    <meta name="description" content="Get in touch with The Roaming Glass for any questions or inquiries about our mobile bartending services.">
     
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -54,78 +54,21 @@
             color: #FFB703;
         }
 
-        /* Services Section */
-        .services-section {
+        /* Contact Section */
+        .contact-section {
             padding: 50px 20px;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .services-section h2 {
+        .contact-section h2 {
             color: #219EBC;
             font-size: 2.5rem;
             margin-bottom: 40px;
         }
 
-        /* Service Boxes - Horizontal Alignment */
-        .services-grid {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-            flex-wrap: nowrap; /* Prevent wrapping */
-        }
-
-        .service-box {
-            background-color: #FFFFFF;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 30%; /* Ensures three boxes in a row */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .service-box h3 {
-            color: #FB8500;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .service-box p {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .service-box a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #FFB703;
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .service-box a:hover {
-            background-color: #FB8500;
-        }
-
-        /* Add-Ons Section */
-        .add-ons-section {
-            margin-top: 50px;
-        }
-
-        .add-ons-section h2 {
-            color: #219EBC;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .add-ons-box {
+        .contact-form {
             background-color: #FFFFFF;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -133,26 +76,41 @@
             text-align: left;
         }
 
-        .add-ons-box ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .add-ons-box ul li {
-            font-size: 1.1rem;
+        .contact-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
             color: #333;
-            margin-bottom: 15px;
-            line-height: 1.5;
         }
 
-        .add-ons-box ul li strong {
-            color: #FB8500;
+        .contact-form input, .contact-form textarea {
+            width: 100%; /* Ensures full width input fields */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
 
-        .add-ons-box ul li:before {
-            content: '➤';
-            color: #219EBC;
-            margin-right: 10px;
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            padding: 12px 25px;
+            background-color: #FFB703;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #FB8500;
         }
 
         /* Footer */
@@ -161,12 +119,14 @@
             color: white;
             padding: 40px 0;
             text-align: center;
-            margin-top: 50px;
+            width: 100%; /* Full-width footer */
         }
 
         footer p {
             font-size: 1rem;
             color: #FFFFFF;
+            margin: 0;
+            padding: 5px 0;
         }
 
         footer a {
@@ -178,16 +138,22 @@
             color: #FB8500;
         }
 
+        /* Center Footer Content */
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
-            .services-grid {
-                flex-direction: column;
-                align-items: center;
+            .contact-section {
+                padding: 20px;
             }
 
-            .service-box {
-                width: 100%; /* Full width on mobile screens */
-                margin-bottom: 20px;
+            .contact-form {
+                padding: 20px;
             }
         }
     </style>
@@ -204,56 +170,31 @@
         </ul>
     </nav>
 
-    <!-- Services Section -->
-    <section class="services-section">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <!-- Signature Cocktails -->
-            <div class="service-box">
-                <h3>Signature Cocktails</h3>
-                <p>Our mixologists create custom cocktails designed to match the theme of your event, ensuring your guests enjoy every sip.</p>
-                <a href="contact.html">Get a Custom Menu</a>
-            </div>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
-            <!-- Event Packages -->
-            <div class="service-box">
-                <h3>Event Packages</h3>
-                <p>We offer a range of event packages, including everything from bartenders and equipment to glassware, tailored for weddings, corporate events, and private parties.</p>
-                <a href="contact.html">Explore Event Packages</a>
-            </div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-            <!-- Mobile Bar Rentals -->
-            <div class="service-box">
-                <h3>Mobile Bar Rentals</h3>
-                <p>Our mobile bar rentals include everything needed for a seamless bar experience at any event. We provide bartenders, equipment, and drinks.</p>
-                <a href="contact.html">Rent a Mobile Bar</a>
-            </div>
-        </div>
-    </section>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
 
-    <!-- Add-Ons Section -->
-    <section class="add-ons-section">
-        <h2>Add-Ons</h2>
-        <div class="add-ons-box">
-            <ul>
-                <li><strong>Customized Cocktail Menu Cards:</strong> Personalized menu cards featuring your signature drinks.</li>
-                <li><strong>Signature Drink Consultation:</strong> Work with our mixologists to create a custom cocktail just for your event.</li>
-                <li><strong>Mocktail Station:</strong> Delight guests who prefer non-alcoholic options with a fully-stocked mocktail station.</li>
-                <li><strong>Themed Glassware and Decor:</strong> Enhance the event ambiance with themed glassware, garnishes, and decor.</li>
-                <li><strong>Champagne Service:</strong> Treat your guests to a dedicated champagne station with beautiful presentation.</li>
-                <li><strong>Ice Sculptures and Custom Garnishes:</strong> Impress your guests with stunning ice sculptures or personalized drink garnishes.</li>
-                <li><strong>Selfie Wall:</strong> A fun, stylish backdrop for guests to take memorable selfies.</li>
-                <li><strong>Selfie Camera:</strong> A selfie camera setup so guests can easily capture their favorite moments.</li>
-                <li><strong>Additional Bartenders:</strong> Have a larger event? Add extra bartenders to keep the drinks flowing smoothly.</li>
-            </ul>
-            <a href="contact.html" class="cta-button">Add These to Your Package</a>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 The Roaming Glass | Managed by Katie Dunn</p>
-        <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
+        <div class="footer-content">
+            <p>© 2024 The Roaming Glass | Managed by Katie Dunn</p>
+            <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
+        </div>
     </footer>
 
 </body>
