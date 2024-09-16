@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - The Roaming Glass</title>
-    <meta name="description" content="Check out the portfolio of The Roaming Glass, showcasing past events and client testimonials.">
-    
+    <meta name="description" content="Explore our portfolio of events and services at The Roaming Glass.">
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     
     <!-- CSS Styling -->
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+        html, body {
+            height: 100%; /* Ensure the body stretches to full height */
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             background-color: #F4F4F9;
             color: #333;
         }
@@ -57,9 +63,10 @@
         /* Portfolio Section */
         .portfolio-section {
             padding: 50px 20px;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            flex-grow: 1; /* Ensures this section grows to fill available space */
         }
 
         .portfolio-section h2 {
@@ -68,22 +75,7 @@
             margin-bottom: 40px;
         }
 
-        .coming-soon {
-            background-color: #FFFFFF;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 50px;
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .coming-soon h3 {
-            font-size: 2rem;
-            color: #FB8500;
-            margin-bottom: 10px;
-        }
-
-        .coming-soon p {
+        .portfolio-section p {
             font-size: 1.2rem;
             color: #666;
         }
@@ -94,12 +86,15 @@
             color: white;
             padding: 40px 0;
             text-align: center;
-            margin-top: 50px;
+            width: 100%;
+            margin-top: auto; /* Push the footer to the bottom */
         }
 
         footer p {
             font-size: 1rem;
             color: #FFFFFF;
+            margin: 0;
+            padding: 5px 0;
         }
 
         footer a {
@@ -109,6 +104,21 @@
 
         footer a:hover {
             color: #FB8500;
+        }
+
+        /* Center Footer Content */
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .portfolio-section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -126,20 +136,16 @@
 
     <!-- Portfolio Section -->
     <section class="portfolio-section">
-        <h2>Our Portfolio</h2>
-        <p>We’re excited to showcase our past events and projects. Stay tuned for updates!</p>
-        
-        <!-- Coming Soon Section -->
-        <div class="coming-soon">
-            <h3>Portfolio Coming Soon!</h3>
-            <p>We’re working on bringing you an exciting showcase of our events and services. Check back soon for updates!</p>
-        </div>
+        <h2>Portfolio</h2>
+        <p>Coming Soon!</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 The Roaming Glass | Managed by Katie Dunn</p>
-        <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
+        <div class="footer-content">
+            <p>© 2024 The Roaming Glass | Managed by Katie Dunn</p>
+            <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
+        </div>
     </footer>
 
 </body>
