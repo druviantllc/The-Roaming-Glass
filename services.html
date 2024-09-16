@@ -124,42 +124,45 @@
         /* Add-Ons Section */
         .add-ons-section {
             margin-top: 50px;
+            text-align: center;
         }
 
         .add-ons-section h2 {
             color: #219EBC;
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
-        .add-ons-box {
+        .add-ons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .add-on-card {
             background-color: #FFFFFF;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 30px;
+            padding: 20px;
             text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .add-ons-box ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .add-ons-box ul li {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .add-ons-box ul li strong {
+        .add-on-card h3 {
             color: #FB8500;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
-        .add-ons-box ul li:before {
-            content: '➤';
-            color: #219EBC;
-            margin-right: 10px;
+        .add-on-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .add-on-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
@@ -252,29 +255,35 @@
     <!-- Add-Ons Section -->
     <section class="add-ons-section">
         <h2>Add-Ons</h2>
-        <div class="add-ons-box">
-            <ul>
-                <li><strong>Customized Cocktail Menu Cards:</strong> Personalized menu cards featuring your signature drinks.</li>
-                <li><strong>Signature Drink Consultation:</strong> Work with our mixologists to create a custom cocktail just for your event.</li>
-                <li><strong>Mocktail Station:</strong> Delight guests who prefer non-alcoholic options with a fully-stocked mocktail station.</li>
-                <li><strong>Themed Glassware and Decor:</strong> Enhance the event ambiance with themed glassware, garnishes, and decor.</li>
-                <li><strong>Champagne Service:</strong> Treat your guests to a dedicated champagne station with beautiful presentation.</li>
-                <li><strong>Ice Sculptures and Custom Garnishes:</strong> Impress your guests with stunning ice sculptures or personalized drink garnishes.</li>
-                <li><strong>Selfie Wall:</strong> A fun, stylish backdrop for guests to take memorable selfies.</li>
-                <li><strong>Selfie Camera:</strong> A selfie camera setup so guests can easily capture their favorite moments.</li>
-                <li><strong>Additional Bartenders:</strong> Have a larger event? Add extra bartenders to keep the drinks flowing smoothly.</li>
-            </ul>
-            <a href="contact.html" class="cta-button">Add These to Your Package</a>
-        </div>
-    </section>
+        <div class="add-ons-grid">
+            <!-- Add-On 1 -->
+            <div class="add-on-card">
+                <h3>Customized Cocktail Menu Cards</h3>
+                <p>Personalized menu cards featuring your signature drinks.</p>
+            </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>© 2024 The Roaming Glass | Managed by Katie Dunn</p>
-            <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
-        </div>
-    </footer>
+            <!-- Add-On 2 -->
+            <div class="add-on-card">
+                <h3>Signature Drink Consultation</h3>
+                <p>Work with our mixologists to create a custom cocktail just for your event.</p>
+            </div>
 
-</body>
-</html>
+            <!-- Add-On 3 -->
+            <div class="add-on-card">
+                <h3>Mocktail Station</h3>
+                <p>Delight guests who prefer non-alcoholic options with a fully-stocked mocktail station.</p>
+            </div>
+
+            <!-- Add-On 4 -->
+            <div class="add-on-card">
+                <h3>Themed Glassware and Decor</h3>
+                <p>Enhance the event ambiance with themed glassware, garnishes, and decor.</p>
+            </div>
+
+            <!-- Add-On 5 -->
+            <div class="add-on-card">
+                <h3>Champagne Service</h3>
+                <p>Treat your guests to a dedicated champagne station with beautiful presentation.</p>
+            </div>
+
+           
