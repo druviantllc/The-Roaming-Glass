@@ -1,250 +1,201 @@
-/* Global Styles */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #F4F4F9;
-    color: #333;
-    box-sizing: border-box; /* Make sure all padding/margin respects the container */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - The Roaming Glass</title>
+    <meta name="description" content="Explore the services offered by The Roaming Glass, including custom cocktails, event packages, and customization options.">
 
-/* Navigation Bar */
-nav {
-    width: 100vw; /* Full width across the viewport */
-    background-color: #023047;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
 
-nav ul li {
-    margin: 0 15px;
-}
+    <!-- Event Details Section -->
+    <section class="calculator-section">
+        <h2>Event Details</h2>
+        <div class="event-details">
+            <!-- Number of Hours -->
+            <div>
+                <label for="hours">Number of Hours:</label>
+                <input type="number" id="hours" placeholder="Enter number of hours (4-hour minimum)" min="4">
+            </div>
 
-nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
+            <!-- Number of Guests -->
+            <div>
+                <label for="guest-count">Number of Guests:</label>
+                <input type="number" id="guest-count" placeholder="Enter number of guests" min="1">
+            </div>
+        </div>
+    </section>
 
-nav ul li a:hover {
-    color: #FFB703;
-}
+    <!-- Services Menu Section -->
+    <section class="menu-section">
+        <h2>Our Services Menu</h2>
 
-/* Services & Add-Ons Section */
-.menu-section, .addons-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: left;
-}
+        <!-- Signature Cocktails - Included -->
+        <div class="menu-item">
+            <div class="menu-details">
+                <h3>Signature Cocktails</h3>
+                <p>Custom cocktails made to fit your event's theme, using seasonal ingredients and unique recipes.</p>
+            </div>
+            <div class="menu-price"><span class="included">Included</span></div>
+        </div>
 
-.menu-section h2, .addons-section h2 {
-    color: #023047;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
+        <!-- Event Packages - Included -->
+        <div class="menu-item">
+            <div class="menu-details">
+                <h3>Event Packages</h3>
+                <p>Includes bartenders, equipment, and glassware for any event size, ensuring a seamless bar experience.</p>
+            </div>
+            <div class="menu-price"><span class="included">Included</span></div>
+        </div>
+    </section>
 
-.menu-item, .addon-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    <!-- Customization Options and Add-Ons -->
+    <section class="addons-section">
+        <h2>Customization Options & Add-Ons</h2>
 
-.menu-item:hover, .addon-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+        <div class="addon-item">
+            <div class="menu-details">
+                <h3>Customized Glassware</h3>
+                <p>Personalized glassware to add an elegant touch to your event.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="custom-glassware" onclick="addService('Customized Glassware', 100)"> <span class="price">$100</span></label>
+            </div>
+        </div>
 
-.menu-details {
-    max-width: 70%;
-}
+        <div class="addon-item">
+            <div class="menu-details">
+                <h3>Customized Drink Menu Design</h3>
+                <p>Design custom drink menus that match your event's theme.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="custom-drink-menu" onclick="addService('Customized Drink Menu Design', 150)"> <span class="price">$150</span></label>
+            </div>
+        </div>
 
-.menu-price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #219EBC;
-}
+        <div class="addon-item">
+            <div class="menu-details">
+                <h3>Themed Garnishes</h3>
+                <p>Themed garnishes for an extra touch of creativity.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="themed-garnishes" onclick="addService('Themed Garnishes', 75)"> <span class="price">$75</span></label>
+            </div>
+        </div>
 
-.included {
-    color: #4CAF50;
-    font-weight: bold;
-}
+        <div class="addon-item">
+            <div class="menu-details">
+                <h3>Mocktail Station</h3>
+                <p>A mocktail station serving non-alcoholic drinks for all guests.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="mocktail-station" onclick="addService('Mocktail Station', 150)"> <span class="price">$150</span></label>
+            </div>
+        </div>
 
-/* Price Alignment */
-.price {
-    color: #219EBC;
-    font-weight: bold;
-    text-align: right;
-    display: inline-block;
-    width: 100px; /* Ensures alignment of price */
-}
+        <div class="addon-item">
+            <div class="menu-details">
+                <h3>Selfie Wall & Camera</h3>
+                <p>Fun selfie wall and camera setup for guests to capture memories.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="selfie-wall" onclick="addService('Selfie Wall & Camera', 250)"> <span class="price">$250</span></label>
+            </div>
+        </div>
 
-/* Button Styling */
-.cta-button {
-    background-color: #FFB703;
-    color: white;
-    border-radius: 25px;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-}
+        <div class="addon-item">
+            <div class="menu-details">
+                <h3>Champagne Service</h3>
+                <p>A dedicated champagne station for a sparkling touch to your event.</p>
+            </div>
+            <div class="menu-price">
+                <label><input type="checkbox" id="champagne-service" onclick="addService('Champagne Service', 175)"> <span class="price">$175</span></label>
+            </div>
+        </div>
+    </section>
 
-.cta-button:hover {
-    background-color: #FB8500;
-}
+<!-- Total Price Calculator Section -->
+<section class="calculator-section">
+    <h2>Total Price Calculator</h2>
 
-/* Calculator Section */
-.calculator-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
+    <!-- Number of Guests -->
+    <div>
+        <label for="guest-count">Number of Guests:</label>
+        <input type="number" id="guest-count" placeholder="Enter number of guests" min="1" onchange="updateAddOns()">
+    </div>
 
-.calculator-section h2 {
-    color: #023047;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
+    <!-- Number of Hours -->
+    <div>
+        <label for="hours">Number of Hours:</label>
+        <input type="number" id="hours" placeholder="Enter number of hours (4-hour minimum)" min="4">
+    </div>
 
-.result-section {
-    margin-top: 30px;
-    text-align: center;
-}
+    <!-- Add-ons -->
+    <div class="checkbox-section">
+        <input type="checkbox" id="glassware">
+        <label for="glassware">Glassware ($2 per guest)</label>
+    </div>
 
-.result-section h3 {
-    font-size: 1.8rem;
-    color: #023047;
-}
+    <div class="checkbox-section">
+        <input type="checkbox" id="garnishes">
+        <label for="garnishes">Garnishes ($1 per guest)</label>
+    </div>
 
-.result-section p {
-    font-size: 1.2rem;
-    color: #666;
-}
+    <div class="checkbox-section">
+        <input type="checkbox" id="selfie-wall">
+        <label for="selfie-wall">Selfie Wall & Camera ($200 flat rate)</label>
+    </div>
 
-/* Footer */
-footer {
-    width: 100vw; /* Ensure full viewport width */
-    background-color: #023047;
-    color: white;
-    padding: 40px 0;
-    margin: 0;
-    position: relative;
-    left: 0; /* Align footer to the left side */
-    right: 0; /* Align footer to the right side */
-    text-align: center;
-    box-sizing: border-box; /* Ensure padding is part of the width */
-}
+    <div class="checkbox-section">
+        <input type="checkbox" id="custom-cocktail">
+        <label for="custom-cocktail">Custom Cocktail Menu ($5 per guest)</label>
+    </div>
 
-footer p, footer a {
-    color: #FFB703;
-    text-decoration: none;
-}
+    <!-- Tip Jar Option -->
+    <div class="checkbox-section">
+        <input type="checkbox" id="no-tip-jar">
+        <label for="no-tip-jar">I do not want a tip jar (18% gratuity will be added).</label>
+    </div>
 
-footer a:hover {
-    color: #FB8500;
-}
+    <!-- Calculate Button -->
+    <button class="cta-button" onclick="calculatePrice()">Calculate Total Price</button>
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .menu-item, .addon-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    <!-- Result Section -->
+    <div id="result" class="result-section">
+        <h3>Total Price: $<span id="total-price">0</span></h3>
+        <p>Number of Bartenders: <span id="bartender-count">0</span></p>
+        <p id="gratuity-message" style="display:none;">An 18% gratuity has been added.</p>
+    </div>
+</section>
 
-    .menu-details {
-        max-width: 100%;
-        margin-bottom: 10px;
-    }
 
-    .calculator-section {
-        padding: 20px;
-    }
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 The Roaming Glass | Managed by Katie Dunn</p>
+            <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
+        </div>
+    </footer>
 
-    .cta-button {
-        width: 100%;
-    }
-}
+    <!-- Link to External JavaScript File -->
+    <script src="js/calculator.js"></script>
 
-/* Event Details Section */
-.calculator-section .event-details {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px; /* Add space between inputs */
-    margin-bottom: 20px;
-}
-
-.calculator-section label {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.calculator-section input[type="number"] {
-    padding: 12px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Centering the Button in the Calculator Section */
-.calculator-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: center; /* Ensure content, including the button, is centered */
-}
-
-.cta-button {
-    background-color: #FFB703;
-    color: white;
-    border-radius: 25px;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-top: 20px;
-    display: inline-block; /* Keeps the button inline for centering */
-}
-
-.cta-button:hover {
-    background-color: #FB8500;
-}
+</body>
+</html>
