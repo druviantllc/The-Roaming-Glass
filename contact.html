@@ -17,33 +17,20 @@
     </script>
 
     <style>
-        /* Fix for full-width Navigation Bar and Footer */
+        /* Ensure full-width navigation and footer */
         html, body {
             margin: 0;
             padding: 0;
             width: 100vw;
-            overflow-x: hidden; /* Remove any horizontal scrolling */
+            overflow-x: hidden;
         }
 
-        /* Ensures the form is responsive */
-        .form-container {
-            max-width: 100%; /* Ensures it doesn't overflow */
-            margin: 0 auto; /* Center the form */
-            padding: 20px;
-        }
-
+        /* Google Form Styling */
         iframe {
-            width: 100%; /* Full width */
-            min-height: 2000px; /* Adjust the height */
+            width: 100%;
+            min-height: 2000px;
             border: none;
-            overflow: hidden; /* Prevent iframe scrolling */
-        }
-
-        /* Full-width Navigation and Footer */
-        nav, footer {
-            width: 100vw; /* Ensure full screen width */
-            margin: 0;
-            padding: 0;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -61,10 +48,10 @@
 
     <!-- Inquiry Form Section -->
     <section class="form-section">
-        <!-- Responsive Google Form with Dynamic Resizing -->
+        <!-- Google Form Embed -->
         <div class="form-container">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFgWg_dFKfYTMH880j185LwnFSfKV876ar5XAqMUfwYWSKA/viewform?embedded=true"
-                    style="width: 100%; min-height: 2000px; border: none; overflow: hidden;" 
+                    style="width: 100%; min-height: 2000px; border: none;" 
                     frameborder="0" 
                     marginheight="0" 
                     marginwidth="0" 
