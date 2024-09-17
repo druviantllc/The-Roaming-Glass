@@ -16,8 +16,9 @@
         /* Ensure the iframe has a fallback minimum height */
         iframe {
             width: 100%;
-            min-height: 2000px; /* Set a substantial minimum height for the form */
+            min-height: 2000px; /* Set a minimum height for fallback */
             border: none;
+            overflow: hidden; /* Prevent any internal scrolling */
         }
     </style>
 </head>
@@ -41,7 +42,7 @@
         <!-- Responsive Google Form with Dynamic Resizing -->
         <div class="form-container">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFgWg_dFKfYTMH880j185LwnFSfKV876ar5XAqMUfwYWSKA/viewform?embedded=true"
-                    style="width: 100%; min-height: 2000px; border: none;" 
+                    style="width: 100%; min-height: 2000px; border: none; overflow: hidden;" 
                     frameborder="0" 
                     marginheight="0" 
                     marginwidth="0" 
