@@ -21,133 +21,74 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html">Cart</a></li>
         </ul>
     </nav>
-
-    <!-- Event Details Section -->
-    <section class="calculator-section">
-        <h2>Event Details</h2>
-        <div class="event-details">
-            <!-- Number of Hours -->
-            <div>
-                <label for="hours">Number of Hours:</label>
-                <input type="number" id="hours" placeholder="Enter number of hours (4-hour minimum)" min="4">
-            </div>
-
-            <!-- Number of Guests -->
-            <div>
-                <label for="guest-count">Number of Guests:</label>
-                <input type="number" id="guest-count" placeholder="Enter number of guests" min="1" onchange="updateAddOns()">
-            </div>
-        </div>
-    </section>
 
     <!-- Services Menu Section -->
     <section class="menu-section">
         <h2>Our Services Menu</h2>
 
-        <!-- Signature Cocktails - Included -->
+        <!-- Signature Cocktails - Explained -->
         <div class="menu-item">
             <div class="menu-details">
                 <h3>Signature Cocktails</h3>
-                <p>Custom cocktails made to fit your event's theme, using seasonal ingredients and unique recipes. <strong>Note:</strong> Alcohol must be provided by the customer.</p>
+                <p>Our expert mixologists create custom cocktails tailored to your event’s theme and preferences. From seasonal ingredients to unique recipes, every drink is crafted with precision. You provide the alcohol, and we handle the rest, ensuring each drink is an experience in itself.</p>
             </div>
-            <div class="menu-price"><span class="included">Included</span></div>
         </div>
 
-        <!-- Event Packages - Included -->
+        <!-- Event Packages - Explained -->
         <div class="menu-item">
             <div class="menu-details">
                 <h3>Event Packages</h3>
-                <p>Includes bartenders, equipment, and glassware for any event size, ensuring a seamless bar experience. <strong>Note:</strong> Alcohol must be provided by the customer.</p>
+                <p>Our event packages are designed to cover everything from bartending services to equipment and glassware. Whether it's a wedding, corporate event, or private party, we offer packages that cater to every event size, ensuring a seamless and enjoyable bar experience. Note: Alcohol must be provided by the customer.</p>
             </div>
-            <div class="menu-price"><span class="included">Included</span></div>
         </div>
     </section>
 
     <!-- Customization Options and Add-Ons Section -->
-   <section class="addons-section">
-    <h2>Customization Options & Add-Ons</h2>
-    <div class="menu-item">
-        <div class="menu-details">
-            <h3>Customized Glassware</h3>
-            <p>Personalized glassware for your guests.</p>
-        </div>
-        <div class="menu-price">
-            <label><input type="checkbox" id="custom-glassware" onclick="addService('Customized Glassware', 100)"> $100</label>
-        </div>
-    </div>
+    <section class="addons-section">
+        <h2>Customization Options & Add-Ons</h2>
 
-    <div class="menu-item">
-        <div class="menu-details">
-            <h3>Customized Drink Menu Design</h3>
-            <p>Beautifully designed custom drink menus.</p>
-        </div>
-        <div class="menu-price">
-            <label><input type="checkbox" id="custom-drink-menu" onclick="addService('Customized Drink Menu Design', 150)"> $150</label>
-        </div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-details">
-            <h3>Themed Garnishes</h3>
-            <p>Themed garnishes for a creative touch.</p>
-        </div>
-        <div class="menu-price">
-            <label><input type="checkbox" id="themed-garnishes" onclick="addService('Themed Garnishes', 75)"> $75</label>
-        </div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-details">
-            <h3>Mocktail Station</h3>
-            <p>Non-alcoholic mocktails for all guests.</p>
-        </div>
-        <div class="menu-price">
-            <label><input type="checkbox" id="mocktail-station" onclick="addService('Mocktail Station', 150)"> $150</label>
-        </div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-details">
-            <h3>Selfie Wall & Camera</h3>
-            <p>Fun backdrop and camera setup for selfies.</p>
-        </div>
-        <div class="menu-price">
-            <label><input type="checkbox" id="selfie-wall" onclick="addService('Selfie Wall & Camera', 250)"> $250</label>
-        </div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-details">
-            <h3>Champagne Service</h3>
-            <p>A dedicated champagne station for guests.</p>
-        </div>
-        <div class="menu-price">
-            <label><input type="checkbox" id="champagne-service" onclick="addService('Champagne Service', 175)"> $175</label>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Total Price Calculator Section -->
-    <section class="calculator-section">
-        <h2>Total Price Calculator</h2>
-
-        <!-- Tip Jar Option -->
-        <div>
-            <input type="checkbox" id="no-tip-jar">
-            <label for="no-tip-jar">I do not want a tip jar (18% gratuity will be added).</label>
+        <div class="menu-item">
+            <div class="menu-details">
+                <h3>Customized Glassware</h3>
+                <p>Enhance your event with personalized glassware that adds a touch of elegance and individuality to your bar setup. Your guests will be impressed by the attention to detail.</p>
+            </div>
         </div>
 
-        <!-- Calculate Button -->
-        <button class="cta-button" onclick="calculatePrice()">Calculate Total Price</button>
+        <div class="menu-item">
+            <div class="menu-details">
+                <h3>Customized Drink Menu Design</h3>
+                <p>Let us design a beautiful custom drink menu that aligns with your event’s theme. This service includes everything from design to presentation, ensuring your bar menu is as memorable as the drinks themselves.</p>
+            </div>
+        </div>
 
-        <!-- Result Section -->
-        <div id="result" class="result-section">
-            <h3>Total Price: $<span id="total-price">0</span></h3>
-            <p id="gratuity-message" style="display:none;">An 18% gratuity has been added.</p>
+        <div class="menu-item">
+            <div class="menu-details">
+                <h3>Themed Garnishes</h3>
+                <p>Elevate your cocktails with our themed garnishes, providing an extra touch of creativity and sophistication. Perfect for themed events, weddings, and special occasions.</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-details">
+                <h3>Mocktail Station</h3>
+                <p>Our mocktail station offers a variety of non-alcoholic options that are just as delicious and sophisticated as their alcoholic counterparts. Ideal for guests who prefer not to drink alcohol.</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-details">
+                <h3>Selfie Wall & Camera</h3>
+                <p>Add a fun element to your event with a selfie wall and camera setup, allowing your guests to capture memorable moments while enjoying the bar experience.</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-details">
+                <h3>Champagne Service</h3>
+                <p>Our champagne service is perfect for special occasions, offering a dedicated station where guests can enjoy a sparkling toast to celebrate your event in style.</p>
+            </div>
         </div>
     </section>
 
@@ -158,9 +99,6 @@
             <p><a href="mailto:druviantllc@gmail.com">Contact Us: druviantllc@gmail.com</a></p>
         </div>
     </footer>
-
-    <!-- Link to External JavaScript File -->
-    <script src="js/calculator.js"></script>
 
 </body>
 </html>
