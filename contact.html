@@ -8,6 +8,26 @@
 
     <!-- Link to External CSS File -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Ensures the form is responsive */
+        .form-container {
+            max-width: 100%; /* Ensures it doesn't overflow */
+            margin: 0 auto; /* Center the form */
+            padding: 20px;
+        }
+
+        iframe {
+            width: 100%; /* Full width on mobile and smaller screens */
+            height: 1936px; /* Adjust the height based on the form's length */
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            iframe {
+                height: 2100px; /* Increase height for mobile */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -26,78 +46,11 @@
         <h2>Request an Estimate</h2>
         <p>Fill out the form below to request a custom estimate for your event.</p>
 
-        <form action="thankyou.html" method="POST">
-            <h3>Contact Information</h3>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number (Optional):</label>
-            <input type="text" id="phone" name="phone">
-
-            <h3>Event Information</h3>
-            <label for="event-type">Event Type:</label>
-            <select id="event-type" name="event-type" required>
-                <option value="wedding">Wedding</option>
-                <option value="corporate">Corporate Event</option>
-                <option value="private">Private Party</option>
-                <option value="other">Other</option>
-            </select>
-
-            <label for="guests">Number of Guests:</label>
-            <input type="number" id="guests" name="guests" required>
-
-            <label for="hours">Event Duration (Hours):</label>
-            <input type="number" id="hours" name="hours" min="1" required>
-
-            <label for="date">Event Date:</label>
-            <input type="date" id="date" name="date" required>
-
-            <label for="location">Event Location:</label>
-            <input type="text" id="location" name="location" required>
-
-            <h3>Service Requirements</h3>
-            <label>Services Needed (Check all that apply):</label>
-            <input type="checkbox" id="cocktails" name="services" value="Signature Cocktails">
-            <label for="cocktails">Signature Cocktails</label><br>
-            <input type="checkbox" id="event-package" name="services" value="Event Package">
-            <label for="event-package">Event Package</label><br>
-            <input type="checkbox" id="mocktail" name="services" value="Mocktail Station">
-            <label for="mocktail">Mocktail Station</label><br>
-            <input type="checkbox" id="champagne" name="services" value="Champagne Service">
-            <label for="champagne">Champagne Service</label><br>
-            <input type="checkbox" id="custom-menu" name="services" value="Custom Drink Menu">
-            <label for="custom-menu">Customized Drink Menu</label>
-
-            <h3>Customization Options</h3>
-            <input type="checkbox" id="glassware" name="addons" value="Customized Glassware">
-            <label for="glassware">Customized Glassware</label><br>
-            <input type="checkbox" id="garnishes" name="addons" value="Themed Garnishes">
-            <label for="garnishes">Themed Garnishes</label><br>
-            <input type="checkbox" id="selfie-wall" name="addons" value="Selfie Wall">
-            <label for="selfie-wall">Selfie Wall & Camera</label>
-
-            <h3>Alcohol Responsibility</h3>
-            <label>Are you aware that you are responsible for providing the alcohol?</label><br>
-            <input type="radio" id="aware-yes" name="alcohol-responsibility" value="Yes" required>
-            <label for="aware-yes">Yes</label><br>
-            <input type="radio" id="aware-no" name="alcohol-responsibility" value="No" required>
-            <label for="aware-no">No</label>
-
-            <h3>Additional Information</h3>
-            <label for="notes">Special Requests or Additional Notes:</label>
-            <textarea id="notes" name="notes" placeholder="Any additional information..."></textarea>
-
-            <h3>Preferred Contact Method</h3>
-            <input type="radio" id="contact-email" name="contact-method" value="Email" required>
-            <label for="contact-email">Email</label><br>
-            <input type="radio" id="contact-phone" name="contact-method" value="Phone" required>
-            <label for="contact-phone">Phone</label>
-
-            <button type="submit">Submit Inquiry</button>
-        </form>
+        <!-- Responsive Google Form -->
+        <div class="form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFgWg_dFKfYTMH880j185LwnFSfKV876ar5XAqMUfwYWSKA/viewform?embedded=true" 
+                    width="100%" height="1936" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
     </section>
 
     <!-- Footer -->
