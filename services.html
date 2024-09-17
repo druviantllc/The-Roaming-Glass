@@ -38,7 +38,7 @@
             <!-- Number of Guests -->
             <div>
                 <label for="guest-count">Number of Guests:</label>
-                <input type="number" id="guest-count" placeholder="Enter number of guests" min="1">
+                <input type="number" id="guest-count" placeholder="Enter number of guests" min="1" onchange="updateAddOns()">
             </div>
         </div>
     </section>
@@ -76,17 +76,7 @@
                 <p>Personalized glassware to add an elegant touch to your event.</p>
             </div>
             <div class="menu-price">
-                <label><input type="checkbox" id="glassware" onclick="addService('Customized Glassware', 100)"> <span class="price">$100</span></label>
-            </div>
-        </div>
-
-        <div class="addon-item">
-            <div class="menu-details">
-                <h3>Customized Drink Menu Design</h3>
-                <p>Design custom drink menus that match your event's theme.</p>
-            </div>
-            <div class="menu-price">
-                <label><input type="checkbox" id="custom-drink-menu" onclick="addService('Customized Drink Menu Design', 150)"> <span class="price">$150</span></label>
+                <label><input type="checkbox" id="glassware"> <span class="price">$2 per guest</span></label>
             </div>
         </div>
 
@@ -96,17 +86,7 @@
                 <p>Themed garnishes for an extra touch of creativity.</p>
             </div>
             <div class="menu-price">
-                <label><input type="checkbox" id="themed-garnishes" onclick="addService('Themed Garnishes', 75)"> <span class="price">$75</span></label>
-            </div>
-        </div>
-
-        <div class="addon-item">
-            <div class="menu-details">
-                <h3>Mocktail Station</h3>
-                <p>A mocktail station serving non-alcoholic drinks for all guests.</p>
-            </div>
-            <div class="menu-price">
-                <label><input type="checkbox" id="mocktail-station" onclick="addService('Mocktail Station', 150)"> <span class="price">$150</span></label>
+                <label><input type="checkbox" id="garnishes"> <span class="price">$1 per guest</span></label>
             </div>
         </div>
 
@@ -116,40 +96,40 @@
                 <p>Fun selfie wall and camera setup for guests to capture memories.</p>
             </div>
             <div class="menu-price">
-                <label><input type="checkbox" id="selfie-wall" onclick="addService('Selfie Wall & Camera', 250)"> <span class="price">$250</span></label>
+                <label><input type="checkbox" id="selfie-wall"> <span class="price">$200 flat rate</span></label>
             </div>
         </div>
 
         <div class="addon-item">
             <div class="menu-details">
-                <h3>Champagne Service</h3>
-                <p>A dedicated champagne station for a sparkling touch to your event. <strong>Note:</strong> Champagne must be provided by the customer.</p>
+                <h3>Custom Cocktail Menu</h3>
+                <p>Create a custom cocktail menu designed specifically for your event.</p>
             </div>
             <div class="menu-price">
-                <label><input type="checkbox" id="champagne-service" onclick="addService('Champagne Service', 175)"> <span class="price">$175</span></label>
+                <label><input type="checkbox" id="custom-cocktail"> <span class="price">$5 per guest</span></label>
             </div>
         </div>
     </section>
 
-<!-- Total Price Calculator Section -->
-<section class="calculator-section">
-    <h2>Total Price Calculator</h2>
+    <!-- Total Price Calculator Section -->
+    <section class="calculator-section">
+        <h2>Total Price Calculator</h2>
 
-    <!-- Tip Jar Option -->
-    <div>
-        <input type="checkbox" id="no-tip-jar">
-        <label for="no-tip-jar">I do not want a tip jar (18% gratuity will be added).</label>
-    </div>
+        <!-- Tip Jar Option -->
+        <div>
+            <input type="checkbox" id="no-tip-jar">
+            <label for="no-tip-jar">I do not want a tip jar (18% gratuity will be added).</label>
+        </div>
 
-    <!-- Calculate Button -->
-    <button class="cta-button" onclick="calculatePrice()">Calculate Total Price</button>
+        <!-- Calculate Button -->
+        <button class="cta-button" onclick="calculatePrice()">Calculate Total Price</button>
 
-    <!-- Result Section -->
-    <div id="result" class="result-section">
-        <h3>Total Price: $<span id="total-price">0</span></h3>
-        <p id="gratuity-message" style="display:none;">An 18% gratuity has been added.</p>
-    </div>
-</section>
+        <!-- Result Section -->
+        <div id="result" class="result-section">
+            <h3>Total Price: $<span id="total-price">0</span></h3>
+            <p id="gratuity-message" style="display:none;">An 18% gratuity has been added.</p>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
