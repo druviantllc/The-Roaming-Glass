@@ -6,12 +6,13 @@ html, body {
     font-family: 'Poppins', sans-serif;
     background-color: #F4F4F9;
     color: #333;
-    box-sizing: border-box; /* Make sure all padding/margin respects the container */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Navigation Bar */
 nav {
-    width: 100vw; /* Full width across the viewport */
+    width: 100vw; /* Full width */
     background-color: #023047;
     padding: 15px 0;
     text-align: center;
@@ -113,7 +114,7 @@ nav ul li a:hover {
     cursor: pointer;
     font-size: 1.1rem;
     margin-top: 20px;
-    display: block;
+    display: inline-block; /* Inline-block allows centering */
     text-align: center;
 }
 
@@ -132,10 +133,26 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.calculator-section h2 {
-    color: #023047;
-    font-size: 2.5rem;
+/* Event Details Inputs */
+.calculator-section .event-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Add space between inputs */
     margin-bottom: 20px;
+}
+
+.calculator-section label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.calculator-section input[type="number"] {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .result-section {
@@ -159,12 +176,12 @@ footer {
     background-color: #023047;
     color: white;
     padding: 40px 0;
-    margin: 0;
-    position: relative;
-    left: 0; /* Align footer to the left side */
-    right: 0; /* Align footer to the right side */
+    margin: 0; /* Remove any margins */
+    position: relative; /* Non-fixed footer */
+    left: 0; /* Ensure footer touches the left side */
+    right: 0; /* Ensure footer touches the right side */
     text-align: center;
-    box-sizing: border-box; /* Ensure padding is part of the width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 footer p, footer a {
@@ -195,56 +212,4 @@ footer a:hover {
     .cta-button {
         width: 100%;
     }
-}
-
-/* Event Details Section */
-.calculator-section .event-details {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px; /* Add space between inputs */
-    margin-bottom: 20px;
-}
-
-.calculator-section label {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.calculator-section input[type="number"] {
-    padding: 12px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Centering the Button in the Calculator Section */
-.calculator-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: center; /* Ensure content, including the button, is centered */
-}
-
-.cta-button {
-    background-color: #FFB703;
-    color: white;
-    border-radius: 25px;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-top: 20px;
-    display: inline-block; /* Keeps the button inline for centering */
-}
-
-.cta-button:hover {
-    background-color: #FB8500;
 }
