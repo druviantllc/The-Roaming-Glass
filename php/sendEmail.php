@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $notes = $_POST['notes'];
 
     // Prepare email
-    $to = "your-email@example.com";  // Replace with your email
+    $to = "druviantllc@gmail.com";  // Replace with your email
     $subject = "New Estimate Request from The Roaming Glass";
     $body = "Name: $name\nEmail: $email\nPhone: $phone\nEvent Type: $event_type\nGuests: $guests\nEvent Duration: $hours hours\nEvent Date: $date\nLocation: $location\n\nAdditional Notes:\n$notes";
 
