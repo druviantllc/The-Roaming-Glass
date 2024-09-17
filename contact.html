@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - The Roaming Glass</title>
-    <meta name="description" content="Get in touch with The Roaming Glass for any questions or inquiries about our mobile bartending services.">
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    
+    <title>Request an Estimate - The Roaming Glass</title>
+    <meta name="description" content="Request a custom estimate from The Roaming Glass by filling out this form.">
+
     <!-- Link to External CSS File -->
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -24,23 +21,83 @@
         </ul>
     </nav>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <h2>Contact Us</h2>
-        <div class="contact-form">
-            <form action="submit_form.php" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+    <!-- Inquiry Form Section -->
+    <section class="form-section">
+        <h2>Request an Estimate</h2>
+        <p>Fill out the form below to request a custom estimate for your event.</p>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+        <form action="thankyou.html" method="POST">
+            <h3>Contact Information</h3>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+            <label for="phone">Phone Number (Optional):</label>
+            <input type="text" id="phone" name="phone">
+
+            <h3>Event Information</h3>
+            <label for="event-type">Event Type:</label>
+            <select id="event-type" name="event-type" required>
+                <option value="wedding">Wedding</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="private">Private Party</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" required>
+
+            <label for="hours">Event Duration (Hours):</label>
+            <input type="number" id="hours" name="hours" min="1" required>
+
+            <label for="date">Event Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="location">Event Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <h3>Service Requirements</h3>
+            <label>Services Needed (Check all that apply):</label>
+            <input type="checkbox" id="cocktails" name="services" value="Signature Cocktails">
+            <label for="cocktails">Signature Cocktails</label><br>
+            <input type="checkbox" id="event-package" name="services" value="Event Package">
+            <label for="event-package">Event Package</label><br>
+            <input type="checkbox" id="mocktail" name="services" value="Mocktail Station">
+            <label for="mocktail">Mocktail Station</label><br>
+            <input type="checkbox" id="champagne" name="services" value="Champagne Service">
+            <label for="champagne">Champagne Service</label><br>
+            <input type="checkbox" id="custom-menu" name="services" value="Custom Drink Menu">
+            <label for="custom-menu">Customized Drink Menu</label>
+
+            <h3>Customization Options</h3>
+            <input type="checkbox" id="glassware" name="addons" value="Customized Glassware">
+            <label for="glassware">Customized Glassware</label><br>
+            <input type="checkbox" id="garnishes" name="addons" value="Themed Garnishes">
+            <label for="garnishes">Themed Garnishes</label><br>
+            <input type="checkbox" id="selfie-wall" name="addons" value="Selfie Wall">
+            <label for="selfie-wall">Selfie Wall & Camera</label>
+
+            <h3>Alcohol Responsibility</h3>
+            <label>Are you aware that you are responsible for providing the alcohol?</label><br>
+            <input type="radio" id="aware-yes" name="alcohol-responsibility" value="Yes" required>
+            <label for="aware-yes">Yes</label><br>
+            <input type="radio" id="aware-no" name="alcohol-responsibility" value="No" required>
+            <label for="aware-no">No</label>
+
+            <h3>Additional Information</h3>
+            <label for="notes">Special Requests or Additional Notes:</label>
+            <textarea id="notes" name="notes" placeholder="Any additional information..."></textarea>
+
+            <h3>Preferred Contact Method</h3>
+            <input type="radio" id="contact-email" name="contact-method" value="Email" required>
+            <label for="contact-email">Email</label><br>
+            <input type="radio" id="contact-phone" name="contact-method" value="Phone" required>
+            <label for="contact-phone">Phone</label>
+
+            <button type="submit">Submit Inquiry</button>
+        </form>
     </section>
 
     <!-- Footer -->
