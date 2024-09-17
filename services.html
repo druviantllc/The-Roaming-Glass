@@ -51,7 +51,7 @@
         <div class="menu-item">
             <div class="menu-details">
                 <h3>Signature Cocktails</h3>
-                <p>Custom cocktails made to fit your event's theme, using seasonal ingredients and unique recipes.</p>
+                <p>Custom cocktails made to fit your event's theme, using seasonal ingredients and unique recipes. <strong>Note:</strong> Alcohol must be provided by the customer.</p>
             </div>
             <div class="menu-price"><span class="included">Included</span></div>
         </div>
@@ -60,13 +60,13 @@
         <div class="menu-item">
             <div class="menu-details">
                 <h3>Event Packages</h3>
-                <p>Includes bartenders, equipment, and glassware for any event size, ensuring a seamless bar experience.</p>
+                <p>Includes bartenders, equipment, and glassware for any event size, ensuring a seamless bar experience. <strong>Note:</strong> Alcohol must be provided by the customer.</p>
             </div>
             <div class="menu-price"><span class="included">Included</span></div>
         </div>
     </section>
 
-    <!-- Customization Options and Add-Ons -->
+    <!-- Customization Options and Add-Ons Section -->
     <section class="addons-section">
         <h2>Customization Options & Add-Ons</h2>
 
@@ -76,7 +76,7 @@
                 <p>Personalized glassware to add an elegant touch to your event.</p>
             </div>
             <div class="menu-price">
-                <label><input type="checkbox" id="custom-glassware" onclick="addService('Customized Glassware', 100)"> <span class="price">$100</span></label>
+                <label><input type="checkbox" id="glassware" onclick="addService('Customized Glassware', 100)"> <span class="price">$100</span></label>
             </div>
         </div>
 
@@ -123,7 +123,7 @@
         <div class="addon-item">
             <div class="menu-details">
                 <h3>Champagne Service</h3>
-                <p>A dedicated champagne station for a sparkling touch to your event.</p>
+                <p>A dedicated champagne station for a sparkling touch to your event. <strong>Note:</strong> Champagne must be provided by the customer.</p>
             </div>
             <div class="menu-price">
                 <label><input type="checkbox" id="champagne-service" onclick="addService('Champagne Service', 175)"> <span class="price">$175</span></label>
@@ -135,41 +135,8 @@
 <section class="calculator-section">
     <h2>Total Price Calculator</h2>
 
-    <!-- Number of Guests -->
-    <div>
-        <label for="guest-count">Number of Guests:</label>
-        <input type="number" id="guest-count" placeholder="Enter number of guests" min="1" onchange="updateAddOns()">
-    </div>
-
-    <!-- Number of Hours -->
-    <div>
-        <label for="hours">Number of Hours:</label>
-        <input type="number" id="hours" placeholder="Enter number of hours (4-hour minimum)" min="4">
-    </div>
-
-    <!-- Add-ons -->
-    <div class="checkbox-section">
-        <input type="checkbox" id="glassware">
-        <label for="glassware">Glassware ($2 per guest)</label>
-    </div>
-
-    <div class="checkbox-section">
-        <input type="checkbox" id="garnishes">
-        <label for="garnishes">Garnishes ($1 per guest)</label>
-    </div>
-
-    <div class="checkbox-section">
-        <input type="checkbox" id="selfie-wall">
-        <label for="selfie-wall">Selfie Wall & Camera ($200 flat rate)</label>
-    </div>
-
-    <div class="checkbox-section">
-        <input type="checkbox" id="custom-cocktail">
-        <label for="custom-cocktail">Custom Cocktail Menu ($5 per guest)</label>
-    </div>
-
     <!-- Tip Jar Option -->
-    <div class="checkbox-section">
+    <div>
         <input type="checkbox" id="no-tip-jar">
         <label for="no-tip-jar">I do not want a tip jar (18% gratuity will be added).</label>
     </div>
@@ -180,11 +147,9 @@
     <!-- Result Section -->
     <div id="result" class="result-section">
         <h3>Total Price: $<span id="total-price">0</span></h3>
-        <p>Number of Bartenders: <span id="bartender-count">0</span></p>
         <p id="gratuity-message" style="display:none;">An 18% gratuity has been added.</p>
     </div>
 </section>
-
 
     <!-- Footer -->
     <footer>

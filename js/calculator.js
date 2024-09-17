@@ -1,13 +1,17 @@
+// Function to calculate the total price
 function calculatePrice() {
     const guestCount = parseInt(document.getElementById('guest-count').value) || 0;
     const hours = parseInt(document.getElementById('hours').value) || 0;
     const noTipJar = document.getElementById('no-tip-jar').checked;
 
-    let baseRate = guestCount <= 50 ? 150 : 175;
-    let bartenders = Math.ceil(guestCount / 100); // 1 bartender per 100 guests
-    let bartenderCost = (bartenders - 1) * 75; // Additional $75 per extra bartender
+    if (guestCount === 0 || hours === 0) {
+        alert("Please enter valid numbers for guests and hours.");
+        return;
+    }
 
-    let basePrice = baseRate * hours + bartenderCost;
+    // Base rate logic
+    let baseRate = guestCount <= 50 ? 150 : 175;
+    let basePrice = baseRate * hours;
 
     // Add-ons pricing
     let addOnsPrice = 0;
@@ -18,7 +22,7 @@ function calculatePrice() {
         addOnsPrice += guestCount * 1; // $1 per guest for garnishes
     }
     if (document.getElementById('selfie-wall').checked) {
-        addOnsPrice += 200; // $200 flat rate for selfie wall and camera
+        addOnsPrice += 200; // $200 flat rate for selfie wall
     }
     if (document.getElementById('custom-cocktail').checked) {
         addOnsPrice += guestCount * 5; // $5 per guest for custom cocktail menu
@@ -36,13 +40,12 @@ function calculatePrice() {
 
     // Update the result section
     document.getElementById('total-price').textContent = totalPrice.toFixed(2);
-    document.getElementById('bartender-count').textContent = bartenders;
 }
 
+// Function to update the add-on prices based on guest count
 function updateAddOns() {
     const guestCount = parseInt(document.getElementById('guest-count').value) || 0;
 
-    // Dynamically update add-on prices based on number of guests
     if (guestCount > 0) {
         document.querySelector('label[for="glassware"]').textContent = `Glassware ($${guestCount * 2} total)`;
         document.querySelector('label[for="garnishes"]').textContent = `Garnishes ($${guestCount * 1} total)`;
