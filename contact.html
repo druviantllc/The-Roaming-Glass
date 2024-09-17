@@ -8,19 +8,6 @@
 
     <!-- Link to External CSS File -->
     <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Link to Dynamic Iframe Resizing Script -->
-    <script src="js/iframeResize.js"></script>
-
-    <style>
-        /* Ensure the iframe has a fallback minimum height */
-        iframe {
-            width: 100%;
-            min-height: 2000px; /* Set a minimum height for fallback */
-            border: none;
-            overflow: hidden; /* Prevent any internal scrolling */
-        }
-    </style>
 </head>
 <body>
 
@@ -39,15 +26,47 @@
         <h2>Request an Estimate</h2>
         <p>Fill out the form below to request a custom estimate for your event.</p>
 
-        <!-- Responsive Google Form with Dynamic Resizing -->
-        <div class="form-container">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFgWg_dFKfYTMH880j185LwnFSfKV876ar5XAqMUfwYWSKA/viewform?embedded=true"
-                    style="width: 100%; min-height: 2000px; border: none; overflow: hidden;" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0" 
-                    onload="resizeIframe(this)">Loading…</iframe>
-        </div>
+        <!-- Custom Inquiry Form -->
+        <form action="thankyou.html" method="POST">
+            <h3>Contact Information</h3>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number (Optional):</label>
+            <input type="text" id="phone" name="phone">
+
+            <h3>Event Information</h3>
+
+            <label for="event-type">Event Type:</label>
+            <select id="event-type" name="event-type" required>
+                <option value="wedding">Wedding</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="private">Private Party</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" required>
+
+            <label for="hours">Event Duration (Hours):</label>
+            <input type="number" id="hours" name="hours" min="1" required>
+
+            <label for="date">Event Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="location">Event Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <h3>Additional Information</h3>
+            <label for="notes">Special Requests or Additional Notes:</label>
+            <textarea id="notes" name="notes" placeholder="Any additional information..."></textarea>
+
+            <button type="submit">Submit Inquiry</button>
+        </form>
     </section>
 
     <!-- Footer -->
