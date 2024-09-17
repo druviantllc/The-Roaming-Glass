@@ -67,49 +67,69 @@
     </section>
 
     <!-- Customization Options and Add-Ons Section -->
-    <section class="addons-section">
-        <h2>Customization Options & Add-Ons</h2>
-
-        <div class="addon-item">
-            <div class="menu-details">
-                <h3>Customized Glassware</h3>
-                <p>Personalized glassware to add an elegant touch to your event.</p>
-            </div>
-            <div class="menu-price">
-                <label><input type="checkbox" id="glassware"> <span class="price">$2 per guest</span></label>
-            </div>
+   <section class="addons-section">
+    <h2>Customization Options & Add-Ons</h2>
+    <div class="menu-item">
+        <div class="menu-details">
+            <h3>Customized Glassware</h3>
+            <p>Personalized glassware for your guests.</p>
         </div>
-
-        <div class="addon-item">
-            <div class="menu-details">
-                <h3>Themed Garnishes</h3>
-                <p>Themed garnishes for an extra touch of creativity.</p>
-            </div>
-            <div class="menu-price">
-                <label><input type="checkbox" id="garnishes"> <span class="price">$1 per guest</span></label>
-            </div>
+        <div class="menu-price">
+            <label><input type="checkbox" id="custom-glassware" onclick="addService('Customized Glassware', 100)"> $100</label>
         </div>
+    </div>
 
-        <div class="addon-item">
-            <div class="menu-details">
-                <h3>Selfie Wall & Camera</h3>
-                <p>Fun selfie wall and camera setup for guests to capture memories.</p>
-            </div>
-            <div class="menu-price">
-                <label><input type="checkbox" id="selfie-wall"> <span class="price">$200 flat rate</span></label>
-            </div>
+    <div class="menu-item">
+        <div class="menu-details">
+            <h3>Customized Drink Menu Design</h3>
+            <p>Beautifully designed custom drink menus.</p>
         </div>
+        <div class="menu-price">
+            <label><input type="checkbox" id="custom-drink-menu" onclick="addService('Customized Drink Menu Design', 150)"> $150</label>
+        </div>
+    </div>
 
-        <div class="addon-item">
-            <div class="menu-details">
-                <h3>Custom Cocktail Menu</h3>
-                <p>Create a custom cocktail menu designed specifically for your event.</p>
-            </div>
-            <div class="menu-price">
-                <label><input type="checkbox" id="custom-cocktail"> <span class="price">$5 per guest</span></label>
-            </div>
+    <div class="menu-item">
+        <div class="menu-details">
+            <h3>Themed Garnishes</h3>
+            <p>Themed garnishes for a creative touch.</p>
         </div>
-    </section>
+        <div class="menu-price">
+            <label><input type="checkbox" id="themed-garnishes" onclick="addService('Themed Garnishes', 75)"> $75</label>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <div class="menu-details">
+            <h3>Mocktail Station</h3>
+            <p>Non-alcoholic mocktails for all guests.</p>
+        </div>
+        <div class="menu-price">
+            <label><input type="checkbox" id="mocktail-station" onclick="addService('Mocktail Station', 150)"> $150</label>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <div class="menu-details">
+            <h3>Selfie Wall & Camera</h3>
+            <p>Fun backdrop and camera setup for selfies.</p>
+        </div>
+        <div class="menu-price">
+            <label><input type="checkbox" id="selfie-wall" onclick="addService('Selfie Wall & Camera', 250)"> $250</label>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <div class="menu-details">
+            <h3>Champagne Service</h3>
+            <p>A dedicated champagne station for guests.</p>
+        </div>
+        <div class="menu-price">
+            <label><input type="checkbox" id="champagne-service" onclick="addService('Champagne Service', 175)"> $175</label>
+        </div>
+    </div>
+</section>
+
 
     <!-- Total Price Calculator Section -->
     <section class="calculator-section">
