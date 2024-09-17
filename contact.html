@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="js/iframeResize.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request an Estimate - The Roaming Glass</title>
@@ -9,26 +8,9 @@
 
     <!-- Link to External CSS File -->
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Ensures the form is responsive */
-        .form-container {
-            max-width: 100%; /* Ensures it doesn't overflow */
-            margin: 0 auto; /* Center the form */
-            padding: 20px;
-        }
-
-        iframe {
-            width: 100%; /* Full width on mobile and smaller screens */
-            height: 1936px; /* Adjust the height based on the form's length */
-            border: none;
-        }
-
-        @media (max-width: 768px) {
-            iframe {
-                height: 2100px; /* Increase height for mobile */
-            }
-        }
-    </style>
+    
+    <!-- Link to Dynamic Iframe Resizing Script -->
+    <script src="js/iframeResize.js"></script>
 </head>
 <body>
 
@@ -42,10 +24,19 @@
         </ul>
     </nav>
 
-        <!-- Responsive Google Form -->
+    <!-- Inquiry Form Section -->
+    <section class="form-section">
+        <h2>Request an Estimate</h2>
+        <p>Fill out the form below to request a custom estimate for your event.</p>
+
+        <!-- Responsive Google Form with Dynamic Resizing -->
         <div class="form-container">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFgWg_dFKfYTMH880j185LwnFSfKV876ar5XAqMUfwYWSKA/viewform?embedded=true" 
-                    width="100%" height="1936" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFgWg_dFKfYTMH880j185LwnFSfKV876ar5XAqMUfwYWSKA/viewform?embedded=true"
+                    style="width: 100%; border: none;" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    onload="resizeIframe(this)">Loading…</iframe>
         </div>
     </section>
 
