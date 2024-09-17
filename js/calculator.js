@@ -1,31 +1,33 @@
-// Function to calculate the total price
 function calculatePrice() {
-    const guestCount = parseInt(document.getElementById('guest-count').value) || 0;
-    const hours = parseInt(document.getElementById('hours').value) || 0;
+    const guestCount = document.getElementById('guest-count').value;
+    const hours = document.getElementById('hours').value;
     const noTipJar = document.getElementById('no-tip-jar').checked;
 
-    if (guestCount === 0 || hours === 0) {
-        alert("Please enter valid numbers for guests and hours.");
-        return;
-    }
-
-    // Base rate logic
     let baseRate = guestCount <= 50 ? 150 : 175;
-    let basePrice = baseRate * hours;
+    let bartenders = Math.ceil(guestCount / 100); // 1 bartender per 100 guests
+    let bartenderCost = (bartenders - 1) * 75; // Additional $75 per extra bartender
+
+    let basePrice = baseRate * hours + bartenderCost;
 
     // Add-ons pricing
     let addOnsPrice = 0;
-    if (document.getElementById('glassware').checked) {
-        addOnsPrice += guestCount * 2; // $2 per guest for glassware
+    if (document.getElementById('custom-glassware').checked) {
+        addOnsPrice += 100; // $100 for Customized Glassware
     }
-    if (document.getElementById('garnishes').checked) {
-        addOnsPrice += guestCount * 1; // $1 per guest for garnishes
+    if (document.getElementById('custom-drink-menu').checked) {
+        addOnsPrice += 150; // $150 for Customized Drink Menu
+    }
+    if (document.getElementById('themed-garnishes').checked) {
+        addOnsPrice += 75; // $75 for Themed Garnishes
+    }
+    if (document.getElementById('mocktail-station').checked) {
+        addOnsPrice += 150; // $150 for Mocktail Station
     }
     if (document.getElementById('selfie-wall').checked) {
-        addOnsPrice += 200; // $200 flat rate for selfie wall
+        addOnsPrice += 250; // $250 flat rate for Selfie Wall and Camera
     }
-    if (document.getElementById('custom-cocktail').checked) {
-        addOnsPrice += guestCount * 5; // $5 per guest for custom cocktail menu
+    if (document.getElementById('champagne-service').checked) {
+        addOnsPrice += 175; // $175 for Champagne Service
     }
 
     let totalPrice = basePrice + addOnsPrice;
@@ -42,13 +44,11 @@ function calculatePrice() {
     document.getElementById('total-price').textContent = totalPrice.toFixed(2);
 }
 
-// Function to update the add-on prices based on guest count
 function updateAddOns() {
-    const guestCount = parseInt(document.getElementById('guest-count').value) || 0;
+    const guestCount = document.getElementById('guest-count').value;
 
+    // Dynamically update add-on prices based on number of guests
     if (guestCount > 0) {
-        document.querySelector('label[for="glassware"]').textContent = `Glassware ($${guestCount * 2} total)`;
-        document.querySelector('label[for="garnishes"]').textContent = `Garnishes ($${guestCount * 1} total)`;
         document.querySelector('label[for="custom-cocktail"]').textContent = `Custom Cocktail Menu ($${guestCount * 5} total)`;
     }
 }
