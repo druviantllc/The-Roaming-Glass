@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request an Estimate - The Roaming Glass</title>
-    <meta name="description" content="Request a custom estimate from The Roaming Glass by filling out this form.">
-
-    <!-- Link to External CSS File -->
+    <title>Contact - The Roaming Glass</title>
+    <meta name="description" content="Request an estimate from The Roaming Glass.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,15 +19,10 @@
         </ul>
     </nav>
 
-    <!-- Inquiry Form Section -->
-    <section class="form-section">
+    <!-- Contact Form -->
+    <section>
         <h2>Request an Estimate</h2>
-        <p>Fill out the form below to request a custom estimate for your event.</p>
-
-        <!-- Custom Inquiry Form -->
-        <form action="thankyou.html" method="POST">
-            <h3>Contact Information</h3>
-            
+        <form action="sendEmail.php" method="POST">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -38,8 +31,6 @@
 
             <label for="phone">Phone Number (Optional):</label>
             <input type="text" id="phone" name="phone">
-
-            <h3>Event Information</h3>
 
             <label for="event-type">Event Type:</label>
             <select id="event-type" name="event-type" required>
@@ -50,7 +41,7 @@
             </select>
 
             <label for="guests">Number of Guests:</label>
-            <input type="number" id="guests" name="guests" required>
+            <input type="number" id="guests" name="guests" min="1" required>
 
             <label for="hours">Event Duration (Hours):</label>
             <input type="number" id="hours" name="hours" min="1" required>
@@ -61,13 +52,16 @@
             <label for="location">Event Location:</label>
             <input type="text" id="location" name="location" required>
 
-            <h3>Additional Information</h3>
-            <label for="notes">Special Requests or Additional Notes:</label>
-            <textarea id="notes" name="notes" placeholder="Any additional information..."></textarea>
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
 
             <button type="submit">Submit Inquiry</button>
         </form>
     </section>
+
+</body>
+</html>
+
 
     <!-- Footer -->
     <footer>
